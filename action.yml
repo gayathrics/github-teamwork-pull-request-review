@@ -1,0 +1,21 @@
+name: 'Add comment to the teamwork task when a pr review is submitted'
+description: 'Add a comment in task that a review was submitted'
+inputs:
+  GITHUB_TOKEN:
+    description: 'Github Token'
+    required: true
+  TEAMWORK_URI: 
+    description: 'Teamwork URI for your organization'
+    required: true
+  TEAMWORK_API_KEY:
+    description: "Teamwork API key"
+    required: true
+  TEAMWORK_PROJECT_ID:
+    description: "Teamwork project id where tasks will be synced"
+    required: true
+outputs:
+  taskid: # id of output
+    description: 'task that was updated'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'

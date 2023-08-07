@@ -1,0 +1,26 @@
+{
+  "name": "github-teamwork-pull-request-review",
+  "version": "1.0.0",
+  "description": "Github action to update teamwork and add comments when pull request reviews are submitted",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gayathrics/github-teamwork-pull-request-review.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gayathrics/github-teamwork-pull-request-review/issues"
+  },
+  "homepage": "https://github.com/gayathrics/github-teamwork-pull-request-review#readme",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1",
+    "btoa": "^1.2.1",
+    "node-fetch": "^3.3.2"
+  }
+}
