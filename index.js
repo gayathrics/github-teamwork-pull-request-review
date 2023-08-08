@@ -14,8 +14,8 @@ function getTaskId(body) {
 }
 
 const { pull_request_review, action } = context.payload;
-const user = pull_request_review.sender.login;
-const user_url = pull_request_review.sender.url;
+const user = pull_request_review.review.user.login;
+const user_url = pull_request_review.review.user.url;
 const review_comment = pull_request_review.review.comment;
 const pr_url = pull_request_review.review.pull_request_url;
 const pr_title = pull_request_review.pull_request.title;
