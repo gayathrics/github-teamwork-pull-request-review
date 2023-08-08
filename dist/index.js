@@ -11649,7 +11649,7 @@ const { review, pull_request, action } = context.payload;
 // console.log(action);
 const user = review.user.login;
 const user_url = review.user.url;
-const review_comment = review.comment;
+const review_comment = review.body;
 const pr_url = review.pull_request_url;
 const pr_title = pull_request.title;
 const base_ref = pull_request.base.ref;
