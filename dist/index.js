@@ -16962,17 +16962,18 @@ function getTaskId(body) {
     return parts.at(-1);
 }
 
-const { pull_request_review, action } = context.payload;
-console.log(pull_request_review);
+const { review, pull_request, action } = context.payload;
+console.log(review);
+console.lof(pull_request);
 console.log(action);
-const user = pull_request_review.review.user.login;
-const user_url = pull_request_review.review.user.url;
-const review_comment = pull_request_review.review.comment;
-const pr_url = pull_request_review.review.pull_request_url;
-const pr_title = pull_request_review.pull_request.title;
-const taskId = getTaskId(pull_request_review.pull_request.body);
-const base_ref = pull_request_review.pull_request.base.ref;
-const head_ref = pull_request_review.pull_request.head.ref;
+const user = review.user.login;
+const user_url = review.user.url;
+const review_comment = review.comment;
+const pr_url = review.pull_request_url;
+const pr_title = pull_request.title;
+const taskId = getTaskId(pull_request.body);
+const base_ref = pull_request.base.ref;
+const head_ref = pull_request.head.ref;
 
 
 
