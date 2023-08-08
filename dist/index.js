@@ -16964,7 +16964,7 @@ function getTaskId(body) {
 
 const { review, pull_request, action } = context.payload;
 console.log(review);
-console.lof(pull_request);
+console.log(pull_request);
 console.log(action);
 const user = review.user.login;
 const user_url = review.user.url;
