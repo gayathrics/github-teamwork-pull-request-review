@@ -16963,6 +16963,8 @@ function getTaskId(body) {
 }
 
 const { pull_request_review, action } = context.payload;
+console.log(pull_request_review);
+console.log(action);
 const user = pull_request_review.review.user.login;
 const user_url = pull_request_review.review.user.url;
 const review_comment = pull_request_review.review.comment;
@@ -16972,7 +16974,7 @@ const taskId = getTaskId(pull_request_review.pull_request.body);
 const base_ref = pull_request_review.pull_request.base.ref;
 const head_ref = pull_request_review.pull_request.head.ref;
 
-console.log(context);
+
 
 let auth = btoa(`${twApiKey}:x`);
 var myHeaders = new fetch.Headers();
