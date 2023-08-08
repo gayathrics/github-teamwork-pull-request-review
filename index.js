@@ -8,25 +8,24 @@ const twUri = core.getInput('TEAMWORK_URI');
 const twApiKey = core.getInput('TEAMWORK_API_KEY');
 const twProjectId = core.getInput('TEAMWORK_PROJECT_ID');
 
-function getTaskId(body) {
-    const parts = body.split('/');
-    return parts.at(-1);
-}
-
 const { review, pull_request, action } = context.payload;
-console.log(review);
-console.log(pull_request);
-console.log(action);
+// console.log(review);
+// console.log(pull_request);
+// console.log(action);
 const user = review.user.login;
 const user_url = review.user.url;
 const review_comment = review.comment;
 const pr_url = review.pull_request_url;
 const pr_title = pull_request.title;
-const taskId = getTaskId(pull_request.body);
 const base_ref = pull_request.base.ref;
 const head_ref = pull_request.head.ref;
 
+function getTaskId(body) {
+    const parts = body.split('/');
+    return parts.at(-1);
+}
 
+let taskId = getTaskId(pull_request.body);
 
 let auth = btoa(`${twApiKey}:x`);
 var myHeaders = new fetch.Headers();
